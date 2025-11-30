@@ -1,0 +1,51 @@
+@import "../styles/globals.css";
+
+/* Custom Utilities */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.glass { 
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.glass-solid { 
+  background: rgba(18, 18, 20, 0.8); 
+  backdrop-filter: blur(20px); 
+  border-top: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.lyric-gradient { 
+  background: linear-gradient(180deg, #FFFFFF 20%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.active-word {
+  background: linear-gradient(90deg, #EFB818 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(239, 184, 24, 0.4);
+}
+
+.karaoke-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(123, 97, 255, 0.15), rgba(0, 0, 0, 0));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-slow { animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }

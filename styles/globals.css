@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Noto Sans Khmer", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-panel {
+    background: rgba(20, 20, 23, 0.6);
+    backdrop-filter: blur(20px);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(123, 97, 255, 0.5);
+  }
+
+  .active-lyric {
+    background: linear-gradient(90deg, #efb818 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    transform: scale(1.05);
+  }
+
+  .mask-image-gradient {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+  }
+}
